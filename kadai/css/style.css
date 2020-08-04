@@ -1,0 +1,429 @@
+@charset "utf-8"; /* 文字コード「utf-8」を指定 */
+
+@import url(reset.css);  /*デフォルトのCSSをリセットする */
+@import url(clearfix.css); /* flaot解除用の外部CSSを読み込む */
+
+/*
+//*********** index ************
+//
+// > 初期設定
+// > #all
+// > header
+//
+********************************
+*/
+
+/******* 初期設定 ここから↓ *******/
+/* body要素のfont-familyに環境設定にあるフォントを指定 */
+body {
+    font-family: "Helvetica Neue", Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* h1要素に文字の大きさ「175%」と指定 ※28px */
+h1 {
+    font-size: 175%;
+}
+/* h2要素に文字の大きさ「150%」と指定 ※24px */
+h2 {
+    font-size: 150%;
+}
+/* h3要素に文字の大きさ「125%」と指定 ※20px */
+h3 {
+    font-size: 125%;
+}
+
+/******* 初期設定 ここまで↑ *******/
+
+
+/******* #all ここから↓ *******/
+body{background-color: #efefef;}
+/******* #all ここまで↑ *******/
+
+section{
+    margin-bottom: 100px;
+}
+
+/******* header ここから↓ *******/
+header{
+    text-align: center;
+    padding: 20px 0;
+    background-color: black;
+    border-bottom: 3px solid #c3c317;
+}
+header a{
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 200%;
+    font-weight: bold;
+    color: #e7e7e7;
+}
+/******* header ここまで↑ *******/
+
+ul{
+    margin: 15px 40px 0 40px;
+    padding: 10px;
+    background: #efefef;
+    border: none;
+    border-radius: .5rem;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    outline: none;
+    /* transition: .2s ease-in-out; */
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+    -6px -6px 10px rgba(255, 255, 255, .5),
+    6px 6px 8px rgba(255, 255, 255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+ul li{
+    float: left;
+    /* padding: 20px; */
+    margin: 30px 10px;
+}
+ul li a{
+    text-decoration: none;
+}
+
+/* kadai_nav */
+ul li a{
+    margin: 15px;
+    padding: 20px 25px;
+    background: #efefef;
+    border: none;
+    border-radius: .5rem;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    /* transition: .2s ease-in-out; */
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+    -6px -6px 10px rgba(255, 255, 255, .5),
+    6px 6px 8px rgba(255, 255, 255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+ul li a:hover {
+box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+    -2px -2px 4px rgba(255, 255, 255, .4),
+    2px 2px 2px rgba(255, 255, 255, .05),
+    2px 2px 4px rgba(0, 0, 0, .1);
+}
+ul li a:active {
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+    inset -2px -2px 4px rgba(255, 255, 255, .5),
+    inset 2px 2px 2px rgba(255, 255, 255, .075),
+    inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
+/* kadai_nav end */
+
+section{
+    margin: 15px 40px 0 40px;
+    padding: 20px 25px;
+    background: #efefef;
+    border: none;
+    border-radius: .5rem;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    outline: none;
+    /* transition: .2s ease-in-out; */
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+    -6px -6px 10px rgba(255, 255, 255, .5),
+    6px 6px 8px rgba(255, 255, 255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+section h2{
+    font-weight: 700;
+}
+section p{
+    margin: 20px auto 0 40px;
+}
+section form{
+    margin: 0 auto 0 40px;
+}
+
+/* kadai_01 */
+section input[type="submit"]{
+    margin: 15px;
+    padding: 5px 8px;
+    background: #efefef;
+    border: none;
+    border-radius: .5rem;
+    color: #444;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+    -6px -6px 10px rgba(255, 255, 255, .5),
+    6px 6px 8px rgba(255, 255, 255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+section input[type="submit"]:hover {
+box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+    -2px -2px 4px rgba(255, 255, 255, .4),
+    2px 2px 2px rgba(255, 255, 255, .05),
+    2px 2px 4px rgba(0, 0, 0, .1);
+}
+section input[type="submit"]:active {
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+    inset -2px -2px 4px rgba(255, 255, 255, .5),
+    inset 2px 2px 2px rgba(255, 255, 255, .075),
+    inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
+/* kadai_01 end */
+
+/* kadai_02 */
+#buyDisplay div{
+    margin: 15px 40px 0 40px;
+    padding: 20px 25px;
+    background: #e2e2e2;
+    border: none;
+    border-radius: .5rem;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    outline: none;
+    /* transition: .2s ease-in-out; */
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+    -6px -6px 10px rgba(255, 255, 255, .5),
+    6px 6px 8px rgba(255, 255, 255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+#buyDisplay h3,
+#buyDisplay h4{
+    margin: 20px auto auto 40px;
+}
+#buyDisplay h4{
+    color: #7700ff;
+}
+#buyDisplay form p{
+    margin-left:0;
+}
+#buyDisplay form input[type="submit"]{
+    margin:30px auto 25px 160px;
+    background-color:#ffde96ca;
+}
+#buyResultDisplay div{
+    margin: 15px 40px 0 40px;
+    padding: 20px 25px;
+    background: #e2e2e2;
+    border: none;
+    border-radius: .5rem;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    outline: none;
+    /* transition: .2s ease-in-out; */
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+    -6px -6px 10px rgba(255, 255, 255, .5),
+    6px 6px 8px rgba(255, 255, 255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+#buyResultDisplay h3{
+    margin: 20px auto auto 40px;
+}
+#buyResultDisplay h4{
+    color: #7700ff;
+}
+#buyResultError{
+    background-color: rgb(255, 57, 57);
+    color: yellow;
+}
+/* kadai_02 end */
+
+
+
+/* kadai_04 */
+#tasizanDisplay div,
+#tasizanOutputDisplay div{
+    margin: 15px 40px 0 40px;
+    padding: 20px 25px;
+    background: #e2e2e2;
+    border: none;
+    border-radius: .5rem;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    outline: none;
+    /* transition: .2s ease-in-out; */
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+    -6px -6px 10px rgba(255, 255, 255, .5),
+    6px 6px 8px rgba(255, 255, 255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+#tasizanDisplay h3,
+#tasizanOutputDisplay h3{
+    min-width: 250px;
+    color: black;/*文字色*/
+    padding: 0.5em;/*文字周りの余白*/
+    display: inline-block;/*おまじない*/
+    line-height: 1.3;/*行高*/
+    background: #90cdff;/*背景色*/
+    vertical-align: middle;
+    border-radius: 25px 0px 0px 25px;/*左側の角を丸く*/
+}
+#tasizanDisplay h3:before,
+#tasizanOutputDisplay h3:before{
+    content: '●';
+    color: white;
+    margin-right: 8px;
+}
+#tasizanDisplay form{
+    margin-top: 20px;
+}
+#tasizanOutputDisplay h3{
+    background: pink;
+}
+#tasizanOutputDisplay div p:nth-child(2){
+    font-size: 150%;
+    font-weight: bolder;
+}
+#tasizanOutputDisplay div #ok{
+    color: coral;
+}
+#tasizanOutputDisplay div #ng{
+    color: darkblue;
+}
+#tasizanOutputDisplay div form #errorButton{
+    background-color: rgb(255, 57, 57);
+    color: yellow;
+}
+/* kadai_04 end */
+
+/* kadai_05 */
+#tasizanDisplay div form p{
+    margin: 30px auto 0 15px;
+}
+/* kadai_05 end */
+
+/* kadai_07 */
+#mezamashiDisplay div,
+#mezamashiOutputDisplay div{
+    margin: 15px 40px 0 40px;
+    padding: 20px 25px;
+    background: #e2e2e2;
+    border: none;
+    border-radius: .5rem;
+    color: #444;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    outline: none;
+    /* transition: .2s ease-in-out; */
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+    -6px -6px 10px rgba(255, 255, 255, .5),
+    6px 6px 8px rgba(255, 255, 255, .075),
+    6px 6px 10px rgba(0, 0, 0, .15);
+}
+#mezamashiDisplay h3,
+#mezamashiOutputDisplay h3{
+    min-width: 250px;
+    color: black;/*文字色*/
+    padding: 0.5em;/*文字周りの余白*/
+    display: inline-block;/*おまじない*/
+    line-height: 1.3;/*行高*/
+    background: #90cdff;/*背景色*/
+    vertical-align: middle;
+    border-radius: 25px 0px 0px 25px;/*左側の角を丸く*/
+}
+#mezamashiDisplay h3:before,
+#mezamashiOutputDisplay h3:before{
+    content: '●';
+    color: white;
+    margin-right: 8px;
+}
+#mezamashiDisplay form{
+    margin-top: 20px;
+    margin-left: 0;
+}
+#mezamashiDisplay form fieldset:nth-child(2){
+    margin-top: 20px;
+}
+#mezamashiOutputDisplay h3{
+    background: pink;
+}
+#mezamashiOutputDisplay div p:nth-child(2){
+    font-size: 150%;
+    font-weight: bolder;
+}
+#mezamashiOutputDisplay div form #errorButton{
+    background-color: rgb(255, 57, 57);
+    color: yellow;
+}
+/* kadai_07 end */
+
+                .btn-real-dent {
+                    /*周りの凹み*/
+                    display: inline-block;
+                    position: relative;
+                    text-decoration: none;
+                    color: rgba(3, 169, 244, 0.54);
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    text-align: center;
+                    background: #f7f7f7;
+                    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.08);
+                }
+                .btn-real-dent i {
+                    /*ボタン自体*/
+                    position: absolute;
+                    content: '';
+                    width: 80px;
+                    height: 80px;
+                    line-height: 80px;
+                    left: 10px;
+                    top: 9px;
+                    border-radius: 50%;
+                    font-size: 40px;
+                    background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+                    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+                    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+                    border-bottom: solid 2px #b5b5b5;
+                }
+
+                .btn-real-dent .fa:active {
+                    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+                    border-bottom: solid 2px #d8d8d8;
+                }
+                .btn-real-dent{
+                    position: absolute;
+                    bottom: 15px;
+                    right: 25px;
+                    z-index: 999;
+                }
+
+
+
+footer{
+    /* position: absolute;
+    bottom:0; left:0; right:0; */
+    margin-top: auto;
+    font-size: 88%;
+    font-weight: bold;
+    padding: 10px 0 30px 0;
+    color: #e7e7e7;
+    text-align: center;
+    background-color: black;
+}
+footer div:last-child{
+    margin-top: 30px;
+}

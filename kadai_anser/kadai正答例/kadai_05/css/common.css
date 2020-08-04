@@ -1,0 +1,205 @@
+﻿@charset 'utf-8';
+/* *
+*  [導入Webフォント]
+*  =>  Noto Sans JP http://www.google.com/fonts/earlyaccess
+*  =>  googleが公開している日本語用 Webフォント
+*/
+/* @import url('http://fonts.googleapis.com/earlyaccess/notosansjp.css'); */
+
+/* *
+**********************************
+**************** index ***********
+//
+//> common
+//> header
+//> index
+//> wrap
+//> footer
+**********************************
+**********************************
+*/
+
+/***********************************
+************** common **************
+************************************
+*/
+
+/*
+************** wrap **************
+*/
+body{
+ 
+/* ↓ Web font [ Noto Sans JP ] */
+  /* font-family: 'Noto Sans JP', sans-serif;
+  font-size: 100%; */
+}
+
+#wrap{
+    width: 100%;
+    position: relative;
+    min-height: 100%;
+}
+ul{
+  margin: 0 auto 30px;
+  padding: 0;
+  list-style: none;
+}
+li{
+  float: left;
+  text-align: center;
+}
+li a, li a:link{
+  display: inline-block;
+  padding: 10px 25px;
+  color: #565656;
+}
+li a:hover{
+  color: #565656;
+  background-color: #ffff00;
+  text-decoration: underline;
+}
+li a:visited {
+  color: blue;
+}
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+table td, table th {
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+/*
+************** header **************
+*/
+header {
+  background: #383838;
+  border-bottom: 2px solid #ffff00;
+  color: #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; */
+}
+header h1 {
+  letter-spacing: 2px;
+  text-align: center;
+}
+header a,
+header a:link {
+ text-decoration: none;
+ color: #ccc;
+
+}
+header a:hover {
+ color: #ffff00;
+ transition: 0.3s ease-in-out;
+}
+
+nav {
+  padding: 5px 0 0 10px;
+  margin-bottom: 40px;
+}
+
+nav ul {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  border: 2px solid #ffff00;
+}
+
+#headerInner {
+  width: 90%;
+  margin: 20px auto;
+  background: #fff;
+}
+#headerInner h2 {
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+#headerInner p{
+  margin: 0 0 10px 0;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/*
+************** contents **************
+*/
+section{
+  width: 85%;
+  margin: 0 auto 80px;
+  padding: 20px;
+}
+section h2 {
+  padding: 22px 0 22px 30px;
+  border-bottom: 2px solid #ffff00;
+  background-image: url(../images/listmark.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+section h3 {
+  width: 50%;
+  margin: 0 0 20px 0;
+  background-color: #ff0;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+/* dl, ol初期化 */
+section dl,
+section dt,
+section dd,
+section ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* 設定 */
+section ol li{
+  margin-bottom: 30px;
+}
+section dl {
+  padding: 50px;
+  margin: 50px 0 0 0;
+  border: 1px solid #ffff00;
+}
+section dl dt {
+  margin-bottom: 20px;
+}
+section dl dd {
+  margin-bottom: 20px;
+}
+section dl li {
+  margin-bottom: 70px;
+}
+section li:last-child{
+  margin-bottom: 0;
+}
+
+/*
+************** footer **************
+*/
+footer {
+  background: #202020;
+  color: #ccc;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+  width: 100%;
+  /* ↓ウィンドウ下部に固定の設定 */
+  position: fixed; 
+  bottom: 0;
+}
+address {
+  font-style: normal;
+  font-size: smaller;
+}
+
+
+

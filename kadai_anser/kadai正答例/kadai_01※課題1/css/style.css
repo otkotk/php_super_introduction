@@ -1,0 +1,152 @@
+@charset "utf-8"; /* 文字コード「utf-8」を指定 */
+
+@import url(reset.css);  /*デフォルトのCSSをリセットする */
+@import url(clearfix.css); /* flaot解除用の外部CSSを読み込む */
+
+/* *
+*  [導入Webフォント]
+*  =>  フォント名「Noto Sans JP」
+*  =>  googleが公開している日本語用 Webフォント（ゴシック体）
+*  =>  http://www.google.com/fonts/earlyaccess/notosansjp.css
+*/
+@import url('http://fonts.googleapis.com/earlyaccess/notosansjp.css');
+
+/*
+//*********** index ************
+//
+// > 初期設定
+// > #all
+// > header
+//
+********************************
+*/
+
+/******* 初期設定 ここから↓ *******/
+/* body要素のfont-familyに環境設定にあるフォントを指定 */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    /* font-family: "Helvetica Neue", Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif; */
+}
+/* h1要素に文字の大きさ「175%」と指定 ※28px */
+h1 {
+    font-size: 175%;
+}
+/* h2要素に文字の大きさ「150%」と指定 ※24px */
+h2 {
+    font-size: 150%;
+}
+/* h3要素に文字の大きさ「125%」と指定 ※20px */
+h3 {
+    font-size: 125%;
+}
+
+/******* 初期設定 ここまで↑ *******/
+
+
+/******* #all ここから↓ *******/
+
+/******* #all ここまで↑ *******/
+
+
+/******* header ここから↓ *******/
+header {
+    background: #383838;
+    width: 100%;
+    border-bottom: 2px solid #ffff00;
+    color: #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+header h1 {
+    letter-spacing: 2px; /* 文字と文字の間の余白 */
+    text-align: center; /* テキスト中央揃え */
+    font-weight: bold; /* 太字 */
+}
+header a, 
+header a:link {
+ text-decoration: none;
+ color: #ccc;
+}
+header a:hover {
+ color: #ffff00;
+ transition: 0.3s ease-in-out; /* 色の変化を0.3秒かけて適用 */
+
+}
+/******* header ここまで↑ *******/
+
+/******* nav ここから↓ *******/
+ nav ul{
+    margin: 0 auto 30px;
+    padding: 20px 40px;
+    width: 80%;
+    border: 2px solid #ffff00;
+}
+nav li{
+    float: left; /*float解除はclearfixで*/
+    margin-right: 30px;
+}
+nav li a, nav li a:link{
+    color: #565656;
+    text-decoration: underline;
+}
+nav li a:visited {
+    color: blue;
+}
+nav li a:hover{
+    color: #565656;
+    background-color: #ffff00;
+}
+
+
+
+
+/******* nav ここまで↑ *******/
+
+/******* section ここから↓ *******/
+section{
+  width: 85%;
+  margin: 0 auto 80px;
+  padding: 20px;
+}
+section h2 {
+  padding: 22px 0 22px 30px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #ffff00;
+  background-image: url(../images/listmark.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+section h3 {
+  width: 50%;
+  margin-bottom: 20px;
+  background-color: #ff0;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+section h4 {
+    margin-bottom: 20px;
+}
+section p {
+    margin-bottom: 20px;
+}
+
+/******* section ここまで↑ *******/
+
+/******* footer ここから↓ *******/
+footer {
+    background-color: #202020;
+    color: #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed; /* ウィンドウに対して固定 */
+    bottom: 0; /* 位置プロパティbottom「0px」 */
+}
+footer p {
+    margin-bottom: 10px;
+}
+  /******* footer ここまで↑ *******/
