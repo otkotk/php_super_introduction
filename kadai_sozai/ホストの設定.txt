@@ -1,0 +1,7 @@
+6amk2SC
+
+提出先
+http://192.168.0.245/kadaiServer/s05
+
+問題が載ってるアドレス
+http://192.168.0.245/kadai_mon/index.php
