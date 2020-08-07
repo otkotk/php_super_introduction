@@ -8,7 +8,7 @@
 $pdo = new PDO("mysql:host=localhost;dbname=shop;charset=utf8;", "staff", "password");
 
 if(isset($_REQUEST["command"])){
-    switch($_REQUEST[command]){
+    switch($_REQUEST["command"]){
         case "insert":
             if(empty($_REQUEST["name"]) || !preg_match("/[0-9]+/", $_REQUEST["price"])){
                 break;
@@ -31,28 +31,31 @@ if(isset($_REQUEST["command"])){
 }
 
 foreach($pdo -> query("select * from product") as $row){
-    echo '<form class="ib" action="edit3.php" method="post">';
-    echo '<input type="hidden" name="command" value="update">';
-    echo '<input type="hidden" name="id" value="', $row["id"], '">';
-    echo '<div class="td0">';
-    echo $row["id"];
-    echo '<div class="td1">';
+    echo '<div class="clearfix">';
+        echo '<form class="ib" action="edit3.php" method="post">';
+            echo '<input type="hidden" name="command" value="update">';
+            echo '<input type="hidden" name="id" value="', $row["id"], '">';
+            echo '<div class="td0">';
+                echo '<div class="td1" style="float:left;">';
+                    echo $row["id"];
+                echo '</div>';
+                echo '<div class="td1" style="float:left;">';
+                    echo '<input type="text" name="name" value="', $row["name"], '">';
+                echo '</div>';
+                echo '<div class="td1" style="float:left;">';
+                    echo '<input type="text" name="price" value="', $row["price"], '">';
+                echo '</div>';
+                echo '<div class="td2" style="float:left;">';
+                    echo '<input type="submit" value="更新">';
+                echo '</div>';
+            echo '</div>';
+        echo '</form>';
+        echo '<form class="ib" action="edit3.php" method="post" style="float:left;">';
+            echo '<input type="hidden" name="command" value="delete">';
+            echo '<input type="hidden" name="id" value="', $row["id"], '">';
+            echo '<input type="submit" value="削除">';
+        echo '</form>';
     echo '</div>';
-    echo '<div class="td1">';
-    echo '<input type="text" name="name" value="', $row["name"], '">';
-    echo '</div>';
-    echo '<div class="td1">';
-    echo '<input type="text" name="price" value="', $row["price"], '">';
-    echo '</div>';
-    echo '<div class="td2">';
-    echo '<input type="submit" value="更新">';
-    echo '</div>';
-    echo '</form>';
-    echo '<form class="ib" action="edit3.php" method="post">';
-    echo '<input type="hidden" name="command" value="delete">';
-    echo '<input type="hidden" name="id" value="', $row["id"], '">';
-    echo '<input type="submit" value="削除">';
-    echo '</form>';
     echo "\n";
 }
 ?>

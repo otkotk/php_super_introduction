@@ -168,26 +168,41 @@
 
     <section>
         <h3>for文で作成</h3>
-        <div>
-            <?php
-            // tableを使わずに描画してみる
-            echo '<div style="position:relative;display:flex;height:80px">';
-            for($i=0; $i<count($pixel); $i++){
-                for($j=0; $j<count($pixel[$i]); $j++){
-                    switch($pixel[$i][$j]){
-                        case 0:
-                            echo '<div style="border-radius:none;background:#404040;position:absolute;top:', $i*10, 'px;left:', $j*10, 'px;background-color:#404040;border:1px solid black;width:10px;height:10px;margin:0;padding:0;float:left;box-shadow:none;border-radius:0;"></div>';
-                        break;
-                        case 1:
-                            echo '<div style="border-radius:none;background:#0EE652;position:absolute;top:', $i*10, 'px;left:', $j*10, 'px;background-color:#0EE652;border:1px solid black;width:10px;height:10px;margin:0;padding:0;float:left;box-shadow:none;border-radius:0;"></div>';
-                        break;
-                    }
+        <?php
+        // echo '<div style="position:relative;display:flex;height:80px">';
+        // for($i=0; $i<count($pixel); $i++){
+        //     for($j=0; $j<count($pixel[$i]); $j++){
+        //         switch($pixel[$i][$j]){
+        //             case 0:
+        //                 echo '<div style="border-radius:none;background:#404040;position:absolute;top:', $i*10, 'px;left:', $j*10, 'px;background-color:#404040;border:1px solid black;width:10px;height:10px;margin:0;padding:0;float:left;box-shadow:none;border-radius:0;"></div>';
+        //             break;
+        //             case 1:
+        //                 echo '<div style="border-radius:none;background:#0EE652;position:absolute;top:', $i*10, 'px;left:', $j*10, 'px;background-color:#0EE652;border:1px solid black;width:10px;height:10px;margin:0;padding:0;float:left;box-shadow:none;border-radius:0;"></div>';
+        //             break;
+        //         }
+        //     }
+        // }
+        // echo '</div>';
+        echo '<div>';
+        echo '<table>';
+        for($i=0; $i<count($pixel); $i++){
+            echo '<tr>';
+            for($j=0; $j<count($pixel[$i]); $j++){
+                switch($pixel[$i][$j]){
+                    case 0:
+                        echo '<td></td>';
+                    break;
+                    case 1:
+                        echo '<td class="td1"></td>';
+                    break;
                 }
             }
-            echo '</div>';
-            ?>
-            <!--テーブルを作成-->
-        </div>
+            echo '</tr>';
+        }
+        echo '</table>';
+        echo '</div>';
+        ?>
+    <!--テーブルを作成-->
     </section>
 
     <section>
@@ -201,10 +216,10 @@
             foreach($p1 as $p2){
                 switch($p2){
                     case 0:
-                        echo '<td style="width:13px;height:13px;"></td>';
+                        echo '<td></td>';
                     break;
                     case 1:
-                        echo '<td style="width:13px;height:13px;" class="td1"></td>';
+                        echo '<td class="td1"></td>';
                     break;
                 }
             }
