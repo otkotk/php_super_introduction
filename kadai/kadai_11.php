@@ -11,6 +11,7 @@
         <h2>ドット絵</h2>
         <p>２次元配列と表を使ってドット絵でイニシャルを描く</p>
         <h3>２次元配列の出力の練習</h3>
+        <div>
         <?php
             // ２次元配列の定義
             $pixel = [
@@ -25,10 +26,15 @@
             
             
             // ２次元配列の出力
-            
-            
+            echo $pixel[0][0], '<br>';
+            echo $pixel[1][1], '<br>';
+            echo $pixel[2][2], '<br>';
+            echo $pixel[3][3], '<br>';
             ?>
+        </div>
+    </section>
 
+    <section>
         <h3>２次元配列をfor文で出力</h3>
         <?php
         echo '<div>';
