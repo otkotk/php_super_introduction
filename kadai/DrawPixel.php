@@ -1,22 +1,24 @@
 <style>
-        .phpPixelPanelBackground{
-            border:1px solid white;
-            text-align:center;
-            padding:5px;
-            background-color:#ff0000;
-            color:white;
-        }
-        .td_P{
-            background-color:#eeff00;
-        }
-        .td_H{
-            background-color:#cc00ff;
-        }
-        .floatLeft{
-            float: left;
-        }
-        </style>
+.phpPixelPanelBackground{
+    border:1px solid white;
+    text-align:center;
+    padding:5px;
+    background-color:#ff0000;
+    color:white;
+}
+.td_P{
+    background-color:#eeff00;
+}
+.td_H{
+    background-color:#cc00ff;
+}
+.floatLeft{
+    float: left;
+}
+</style>
+
 <?php
+// ドット絵の種類をstring型で判断して、配列としてreturnする関数
 function PixelText($text){
     $pixel_P = [
         "P",
@@ -48,6 +50,7 @@ function PixelText($text){
     }
 }
 
+// ドット絵を描画する関数
 function DrawPixel($pixel_text){
     echo '<table class="floatLeft">';
     for($i=0; $i<7; $i++){
