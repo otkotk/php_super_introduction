@@ -235,5 +235,25 @@
         echo '</div>';
         ?>
     </section>
+
+    <section>
+        <h3>phpスクリプトでドット絵文字「php」を作成</h3>
+
+        
+        <?php
+        // 外部ファイルから関数を呼び込む
+        require "DrawPixel.php"; 
+
+        // 親タグにはclearfixする
+        echo '<div class="clearfix">';
+
+        // DrawPixel : ドット絵を描画する関数
+        // PixelText : ドット絵の配列をreturnする関数
+        DrawPixel(PixelText("P"));
+        DrawPixel(PixelText("H"));
+        DrawPixel(PixelText("P"));
+        echo '</div>';
+        ?>
+    </section>
 </section>
 <?php require "footerHeaderNav/footer.php" ?>
