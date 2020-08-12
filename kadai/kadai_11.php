@@ -241,6 +241,8 @@
 
         
         <?php
+        $p_t_arr = ["P","H","P"];
+
         // 外部ファイルから関数を呼び込む
         require "DrawPixel.php"; 
 
@@ -249,9 +251,9 @@
 
         // DrawPixel : ドット絵を描画する関数
         // PixelText : ドット絵の配列をreturnする関数
-        DrawPixel(PixelText("P"));
-        DrawPixel(PixelText("H"));
-        DrawPixel(PixelText("P"));
+        foreach($p_t_arr as $pt){
+            DrawPixel(PixelText($pt));
+        }
         echo '</div>';
         ?>
     </section>
