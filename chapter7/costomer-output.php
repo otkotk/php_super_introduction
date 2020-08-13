@@ -6,8 +6,9 @@
 $pdo = new PDO("mysql:host=localhost;dbname=shop;charset=utf8", "staff", "password");
 
 if(isset($_SESSION["customer"])){
-    $customer = $_SESSION["customer"];
-    $id = $customer["id"];
+    $id = $_SESSION["customer"]["id"];
+
+    // 違うIDかつ同じログイン名を探している
     $sql = $pdo -> prepare("select * from customer where id!=? and login=?");
     $sql -> execute([$id, $_REQUEST["login"]]);
 }else{
@@ -17,7 +18,7 @@ if(isset($_SESSION["customer"])){
 
 if(empty($sql->fetchAll())){
     if(isset($_SESSION["customer"])){
-        $sql = $pdo -> prepare("update customer set name=?, address=?, "."login=?, password=? where id=?");
+        $sql = $pdo -> prepare("update customer set name=?, address=?, login=?, password=? where id=?");
         $sql -> execute([
             $_REQUEST["name"],
             $_REQUEST["address"],
