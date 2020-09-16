@@ -6,9 +6,9 @@
     $pdo = new PDO("mysql:host=localhost;dbname=shop;charset=utf8", "staff", "password");
     foreach($pdo -> query('select * from product') as $row){
         echo '<tr>';
-        echo '<td>', $row["id"], '</td>';
-        echo '<td>', $row["name"], '</td>';
-        echo '<td>', $row["price"], '</td>';
+        echo '<td>', htmlspecialchars($row["id"]), '</td>';
+        echo '<td>', htmlspecialchars($row["name"]), '</td>';
+        echo '<td>', htmlspecialchars($row["price"]), '</td>';
         echo '<td>';
         echo '<a href="delete-output.php?id=', $row["id"], '">削除</a>';
         echo '</td>';

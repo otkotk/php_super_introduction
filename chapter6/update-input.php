@@ -11,7 +11,7 @@ foreach($pdo -> query("select * from product") as $row){
     echo '<div class="clearfix" style="margin-left:20px">';
     echo '<form action="update-output.php" method="post">';
     echo '<input type="hidden" name="id" value="', $row['id'], '">';
-    echo '<div class="td0" style="float:left;">', $row["id"], '</div>';
+    echo '<div class="td0" style="float:left;">', sprintf("%03d",$row["id"]), '</div>';
     echo '<div class="td1" style="float:left; margin-left:100px">';
     echo '<input type="text" name="name" value="', $row["name"], '">';
     echo '</div>';
